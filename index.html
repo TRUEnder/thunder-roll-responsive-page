@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <title>Thunder Roll - Most Trusted Coin in the World</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo_with_name.png" alt="Logo with Name">
+        </div>
+        <nav id="navbar">
+            <ul id="navbar-list">
+                <li><a href="#swap" onclick="closeDropdown()">Swap</a></li>
+                <li><a href="#about" onclick="closeDropdown()">About</a></li>
+                <li><a href="#documents" onclick="closeDropdown()">Documents</a></li>
+                <li><a href="#media" onclick="closeDropdown()">News</a></li>
+                <li><a href="#contact-us" onclick="closeDropdown()">Contact Us</a></li>
+            </ul>
+            <i class="fa fa-bars" id="navbar-icon" onclick="dropdown()"></i>
+        </nav>
+    </header>
+
+    <main class="column-horizontal-center">
+        <section class="first-row" aria-labelledby="introduction">
+            <div class="absolute-container">
+                <img class="background-image" src="assets/img/landing_page_image.png" alt="Thunder Bolt Background">
+            </div>
+            <div class="website-introduction">
+                <h1>
+                    <span id="first-line">Introducing.</span>
+                    <br />
+                    <span id="second-line">Thunder Roll Coin!</span>
+                </h1>
+                <p>Decentralized digital currency based on blockchain technology, designed for lightning-fast
+                    and secure
+                    transactions with low fees.</p>
+
+                <a href="#swap" class="swap-button" role="button">
+                    <span>Swap Now</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="swap" class="column-horizontal-center">
+            <h2>Join as our investor.</h2>
+            <div class="copy-coin-address">
+                <div class="coin-address">
+                    <select id="network-selected" onclick="selectNetwork()">
+                        <option value="0x7c8f93bfc42d031ef29a26d86909f9023a77a7a3" selected>BSC</option>
+                        <option value="0x32c42e8b0a9d1c9d13187e8c09cb5de5e7d96872">ETH</option>
+                    </select>
+                    <input type="text" value="0x7c8f93bfc42d031ef29a26d86909f9023a77a7a3" id="address" disabled>
+                </div>
+                <button id="copy-button" role="button" onclick="copyAddress()">COPY</button>
+            </div>
+            <div class="options">
+                <a href="#" role="button">View Chart</a>
+                <a href="#" role="button">Check Binance Scan</a>
+                <a href="#" role="button">PancakeSwap</a>
+                <a href="#" role="button">How to Buy This</a>
+            </div>
+        </section>
+
+        <section id="about" class="column-horizontal-center">
+            <div class="about-container">
+                <div class="about-content">
+                    <h2>About Thunder Roll</h2>
+                    <p>
+                        At Thunder Roll, we're committed to providing our users with a cutting-edge cryptocurrency
+                        experience.
+                        Our platform is
+                        built on a lightning-fast blockchain that allows for near-instant transactions and low fees.
+                        Whether
+                        you're buying or
+                        selling, Thunder Roll makes it easy to transfer funds securely and efficiently.
+                    </p>
+                    <p>
+                        We're passionate about the power of cryptocurrency to transform the way we do business. By
+                        leveraging
+                        the power of
+                        blockchain technology, we're able to provide a decentralized, transparent, and secure platform
+                        for
+                        our
+                        users. Our team
+                        of experts is constantly working to improve our platform and stay ahead of the curve in the
+                        rapidly
+                        evolving world of
+                        cryptocurrency.
+                    </p>
+                    <p>
+                        Join the Thunder Roll community today and experience the future of money!
+                    </p>
+                    <a href="#swap" class="about-button" role="button">Buy Thunder Roll</a>
+                </div>
+
+                <div class="feature-container">
+                    <div class="feature">
+                        <img src="assets/img/auto-burn.svg" alt="Auto Burn">
+                        <div class="feature-desc">
+                            <h4>AUTO BURN</h4>
+                            <p>The dead wallet holds 45%+ of the supply. That means out of the 5% of the reflections
+                                45%+ of them will be distributed to the dead wallet each transaction.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <img src="assets/img/share-earn.svg" alt="Auto-Reflections">
+                        <div class="feature-desc">
+                            <h4>AUTO-REFLECTIONS</h4>
+                            <p>5% fee of each transaction is redistributed to token holders. That means you can earn
+                                more Thunder Roll Coins by holding
+                                them in your wallet.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <img src="assets/img/locked-liquidity.svg" alt="Locked Liquidity">
+                        <div class="feature-desc">
+                            <h4>LOCKED LIQUIDITY</h4>
+                            <p>Majority of initial LP tokens locked & some burned. (Newly generated LP tokens from the
+                                5% LP fees are not)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="documents">
+            <div class="docselector-container column-horizontal-center">
+                <h2>Financial Documents</h2>
+                <div class="document-name">
+                    <select id="document-selected">
+                        <option value="wpaper" selected>WHITE PAPER</option>
+                        <option value="aud_q1_22">AUDIT QUARTAL I 2022</option>
+                        <option value="aud_q2_22">AUDIT QUARTAL I 2022</option>
+                        <option value="aud_q3_22">AUDIT QUARTAL III 2022</option>
+                        <option value="aud_q4_22">AUDIT QUARTAL IV 2022</option>
+                        <option value="aud_q1_23">AUDIT QUARTAL I 2023</option>
+                    </select>
+                    <a href="#" role="button" class="view-button">View</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="media" class="column-horizontal-center">
+            <h2><span>Thunder Roll</span> on Media</h2>
+            <div class="carousel-container">
+                <i class="fas fa-chevron-circle-left" id="prev-button" onclick="prevSlide()"></i>
+                <div class="slide-container">
+                    <div id="0" class="slide">
+                        <article>
+                            <img src="assets/img/placeholder_1.jpg" alt="News">
+                            <h3>Thunder Roll Partnership with Major Tech Company</h3>
+                            <p>Thunder Roll has announced a new partnership with a major tech company, further cementing
+                                its position as a top player
+                                in the cryptocurrency market.</p>
+                        </article>
+                    </div>
+                    <div id="1" class="slide">
+                        <article>
+                            <img src="assets/img/placeholder_2.jpg" alt="News">
+                            <h3>Elon Musk Tweeted about Coin by the name Thunder Roll</h3>
+                            <p>Elon Musk's recent tweet regarding Thunder Roll coin results in a significant surge in
+                                the cryptocurrency's value within
+                                a short period.</p>
+                        </article>
+                    </div>
+                    <div id="2" class="slide">
+                        <article>
+                            <img src="assets/img/placeholder_3.jpg" alt="News">
+                            <h3>Major Retailer now Accepting Thunder Roll as Payment</h3>
+                            <p>In a major move for the industry, a well-known retailer has recently announced that they
+                                will now be accepting Thunder Roll as payment</p>
+                        </article>
+                    </div>
+                    <div id="3" class="slide">
+                        <article>
+                            <img src="assets/img/placeholder_4.jpg" alt="News">
+                            <h3>Thunder Roll Crypto Surges 500% in 24 hours</h3>
+                            <p>Thunder Roll, the newest cryptocurrency on the market, has shocked investors with its
+                                500% surge in just 24 hours,
+                                breaking all-time high records.</p>
+                        </article>
+                    </div>
+                    <div id="4" class="slide">
+                        <article>
+                            <img src="assets/img/placeholder_5.jpg" alt="News">
+                            <h3>Early Investors Rejoice: Thunder Roll Skyrockets</h3>
+                            <p>Investors who bought Thunder Roll coin early on are now reaping the benefits as the
+                                cryptocurrency continues to soar in
+                                value.</p>
+                        </article>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-circle-right" id="next-button" onclick="nextSlide()"></i>
+            </div>
+        </section>
+
+        <div class="contact">
+            <aside>
+                <article class="column-horizontal-center">
+                    <h2>Developer Profile</h2>
+                    <figure class="column-horizontal-center">
+                        <img src="assets/img/devprofile.png" id="developer-profile" alt="Foto Profil">
+                        <div id="background-circle"></div>
+                        <figcaption>
+                            <h3>Muhammad Guntur Arfianto</h3>
+                        </figcaption>
+                    </figure>
+                    <div class="self-profile">
+                        <p>
+                            Third year undergraduate student in
+                            Computer Science Major, Universitas Gadjah Mada.
+                            Currently join in Bangkit Academy 2023 program.
+                        </p>
+                    </div>
+                </article>
+            </aside>
+
+            <section id="contact-us">
+                <h2><span>Any Question?</span>&nbsp;<span>Contact Us.</span></h2>
+                <form method="post" action="mailto:g700153@gmail.com">
+                    <input name="name" id="name" type="text" placeholder="Name" autocomplete="off" spellcheck="false" />
+                    <input name="email" id="email" type="email" placeholder="Email" autocomplete="off"
+                        spellcheck="false" />
+                    <textarea name="message" id="message" rows="10" placeholder="Message" autocomplete="off"
+                        spellcheck="false"></textarea>
+
+                    <input id="email-submit" type="submit" value="Submit"></a>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-box">
+            <div>
+                <p><b>MORE ON THIS</b></p>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                    <li><a href="#media">News</a></li>
+                </ul>
+            </div>
+            <div>
+                <p><b>INVESTMENT</b></p>
+                <ul>
+                    <li><a href="#documents">Documents</a></li>
+                    <li><a href="#swap">Swap</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright-box">
+            <img src="assets/img/logo.png" alt="Logo">
+            <p>Copyright &copy;2023, <b>Thunder Roll</b></p>
+            <p>Thunder Roll is not an investment and fiction only. This landing page is created as dicoding Web
+                Development
+                Basic Course final submission.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/carousel.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,934 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: #1f1f1f;
+    color: white;
+}
+
+section {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+.column-horizontal-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 0.83rem 4%;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+header .logo img {
+    width: 100%;
+}
+
+header #navbar ul {
+    display: flex;
+    gap: 2em;
+}
+
+header #navbar ul li {
+    list-style-type: none;
+}
+
+header #navbar .fa {
+    display: none;
+}
+
+.navbar-mobile {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.navbar-mobile ul {
+    background-color: #1f1f1f;
+    display: flex !important;
+    flex-direction: column;
+    gap: 1.5rem !important;
+    position: absolute;
+    top: 0;
+    right: 20%;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding-top: 4rem;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.navbar-mobile li a {
+    font-size: 0.87rem;
+}
+
+.navbar-mobile i {
+    position: absolute;
+    top: 4%;
+    right: 8%;
+    font-size: 2em;
+}
+
+/* Introduction Session */
+
+section.first-row {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 800px;
+    margin-bottom: 8em;
+}
+
+section.first-row .absolute-container {
+    width: 100%;
+    min-height: 1074px;
+    position: absolute;
+    overflow: hidden;
+}
+
+section.first-row .absolute-container .background-image {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+section.first-row .website-introduction {
+    width: 40%;
+    margin: auto 0;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.website-introduction h1 {
+    font-size: 4.2rem;
+    letter-spacing: -4px;
+}
+
+.website-introduction p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.website-introduction a.swap-button {
+    background-color: #ffd900;
+    color: #1f1f1f;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    margin-top: 1em;
+    padding: 0.9em 33%;
+    border-radius: 10px;
+}
+
+.website-introduction .swap-button:hover {
+    background-color: #ffc400;
+    color: #2c2c2c;
+}
+
+/* Swap Section */
+
+section#swap {
+    width: 85%;
+    margin-top: 6rem;
+    padding: 10% 10% 5%;
+    border-radius: 0.83rem;
+}
+
+#swap h2 {
+    margin-bottom: 2em;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#swap h2 span {
+    display: block;
+}
+
+#swap .copy-coin-address {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 10%;
+}
+
+#swap .copy-coin-address .coin-address {
+    display: flex;
+    width: 70%;
+    height: 3rem;
+}
+
+.coin-address select {
+    background-color: #ffbb00;
+    padding: 0 1rem;
+    border-radius: 1rem 0 0 1rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.coin-address option {
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.coin-address input {
+    width: 100%;
+    padding: 0 2rem;
+    border-radius: 0 1rem 1rem 0;
+    background-color: white;
+}
+
+.copy-coin-address button {
+    background-color: #ffbb00;
+    height: 3rem;
+    padding: 0 2rem;
+    border: 0;
+    border-radius: 1rem;
+    font-size: 0.73rem;
+    font-weight: 800;
+}
+
+.copy-coin-address button:hover {
+    background-color: #ffae00;
+    color: #292929;
+}
+
+#swap .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.33rem 1.5rem;
+}
+
+#swap .options a {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: #383838;
+    border: 1px solid #888888;
+}
+
+#swap .options a:hover {
+    background-color: #2e2e2e;
+}
+
+/* About Thunder Roll Section */
+
+section#about .about-container {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    width: 75%;
+    padding: 7%;
+}
+
+.about-container .about-content {
+    width: 60%;
+}
+
+.about-content h2 {
+    margin-bottom: 3rem;
+}
+
+.about-content p {
+    font-size: 0.83rem;
+    line-height: 1.5rem;
+}
+
+.about-content .about-button {
+    background-color: #ffbb00;
+    color: #1f1f1f;
+    display: block;
+    width: fit-content;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 0.83rem;
+    font-weight: 700;
+}
+
+.about-content .about-button:hover {
+    background-color: #ffae00;
+    color: #292929;
+}
+
+.about-container .feature-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-container .feature {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.feature-container .feature img {
+    width: 3rem;
+    height: 3rem;
+    color: #e2e2e2;
+}
+
+.feature-container .feature p {
+    font-size: 0.66rem;
+}
+
+/* Financial Documents Section */
+
+section#documents {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#documents .docselector-container {
+    padding: 0 0 7rem;
+    gap: 2rem;
+}
+
+.docselector-container .document-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    height: 3.5rem;
+}
+
+.document-name select,
+.document-name a {
+    border-radius: 1.5rem;
+}
+
+.document-name select {
+    padding: 1rem 7rem 1rem 2rem;
+    font-weight: 600;
+}
+
+.document-name select option {
+    margin: 1rem 0 !important;
+}
+
+.document-name .view-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #383838;
+    border: 1px solid #888888;
+    color: white;
+    width: fit-content;
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.document-name .view-button:hover {
+    background-color: #2e2e2e;
+}
+
+/* Thunder Roll on Media Session */
+
+section#media {
+    margin-bottom: 4rem;
+    padding: 3.5rem 0 7rem;
+    gap: 3rem;
+}
+
+section#media h2 span {
+    color: #ffc400;
+}
+
+section#media .carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: 85%;
+}
+
+.carousel-container i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.carousel-container .slide-container {
+    display: flex;
+    min-height: 23.5rem;
+    gap: 1rem;
+}
+
+.slide {
+    flex-grow: 1;
+}
+
+.slide article {
+    width: 100%;
+}
+
+.slide article img {
+    width: 100%;
+    height: 10rem;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+}
+
+.slide article p {
+    font-size: 0.75rem;
+}
+
+/* Contact Us Session */
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
+    padding: 2rem 0rem 4rem;
+    background-color: #ffbb00;
+    color: #1f1f1f;
+}
+
+aside {
+    width: 27%;
+}
+
+aside article {
+    padding: 1rem 2rem 2.5rem;
+    border-radius: 10px;
+}
+
+aside article h2 {
+    text-align: center;
+}
+
+aside figure {
+    margin-block-end: 0;
+}
+
+aside figure img {
+    width: 200px;
+    position: absolute;
+}
+
+aside figure #background-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #e2e2e2;
+    box-shadow: 0.1rem 0.1rem 1rem #888888;
+}
+
+aside figcaption {
+    text-align: center;
+}
+
+aside p {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+section#contact-us {
+    width: fit-content;
+    padding: 1rem 2rem 2.5rem;
+}
+
+section#contact-us form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4rem;
+}
+
+section#contact-us input,
+textarea {
+    font-family: Arial, Helvetica, sans-serif !important;
+    width: 60ch;
+    padding: 0.83em;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+section#contact-us form #email-submit {
+    display: block;
+    text-align: center;
+    background-color: #1f1f1f;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+    border-radius: 0.83em;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 4% 10% 3% 16%;
+}
+
+footer .footer-box {
+    display: flex;
+    gap: 5rem;
+    font-size: 0.83rem;
+}
+
+.footer-box div p {
+    margin-bottom: 2.5rem;
+    color: #ffbb00;
+}
+
+.footer-box div ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+footer .copyright-box {
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    font-size: 0.73rem;
+    line-height: 1.1rem;
+    color: #9b9b9b;
+}
+
+.copyright-box img {
+    width: 4.3rem;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1038px) {
+    section.first-row {
+        margin-bottom: 2em;
+    }
+
+    .website-introduction h1 {
+        font-size: 3.2rem;
+        letter-spacing: -2px;
+    }
+
+    .website-introduction p {
+        font-size: 1rem;
+    }
+
+    .website-introduction a.swap-button {
+        padding: 0.9em 23%;
+    }
+
+    .absolute-container img.background-image {
+        width: 1024px !important;
+    }
+
+    section#swap {
+        margin-top: 0;
+    }
+
+    section#about .about-container {
+        width: 100%;
+    }
+
+    section#contact-us input,
+    textarea {
+        width: 45ch;
+    }
+
+    aside article {
+        padding: 1rem 1rem 2.5rem;
+    }
+
+    aside article p {
+        font-weight: 600;
+        font-size: 0.75rem;
+        line-height: 1.3em;
+    }
+
+    footer {
+        padding: 4% 8% 5% 8%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        padding-right: 7%;
+    }
+
+    header #navbar ul {
+        display: none;
+    }
+
+    header #navbar .fa {
+        display: inline;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+
+    section.first-row {
+        justify-content: center;
+    }
+
+    section.first-row .website-introduction {
+        width: 60%;
+        padding-right: 0;
+        justify-content: center;
+    }
+
+    .website-introduction h1 {
+        font-size: 3rem;
+    }
+
+    h1 #first-line,
+    h1 #second-line {
+        background-color: #ffbb00;
+        background-blend-mode: color;
+    }
+
+    .website-introduction p {
+        width: 60%;
+        font-size: 0.83rem;
+        font-weight: 700;
+        text-shadow: 1px 1px 3px #1f1f1f;
+    }
+
+    .website-introduction a.swap-button {
+        font-size: 0.77rem;
+    }
+
+    section#swap {
+        width: 100% !important;
+        padding: 20% 10% 15%;
+    }
+
+    #swap .copy-coin-address .coin-address select {
+        padding: 0 0.5rem;
+    }
+
+    section#about {
+        padding-top: 4rem;
+    }
+
+    section#about .about-container {
+        flex-direction: column;
+    }
+
+    section#about .about-container .about-content {
+        width: 80%;
+        text-align: justify;
+    }
+
+    section#about .feature-container {
+        width: 80%;
+        padding-left: 10%;
+        align-self: flex-start;
+    }
+
+    #documents .docselector-container {
+        padding: 12rem 0 7rem;
+    }
+
+    section#media {
+        padding: 0.5rem 0 3rem;
+    }
+
+    section#media .carousel-container {
+        width: 90%;
+    }
+
+    .slide article h3 {
+        font-size: 0.95em;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 50%;
+    }
+
+    aside article {
+        padding: 1rem 2.5rem 2.5rem;
+    }
+
+    aside article p {
+        font-size: 0.7rem;
+    }
+
+    section#contact-us {
+        padding-top: 3rem;
+    }
+
+    footer .footer-box {
+        gap: 2rem;
+    }
+
+    footer .copyright-box {
+        font-size: 0.66rem;
+    }
+}
+
+@media screen and (max-width: 585px) {
+    .website-introduction h1 {
+        font-size: 2.7rem;
+        letter-spacing: -2px;
+    }
+
+    .website-introduction p {
+        width: 80%;
+        font-weight: 600;
+        text-shadow: 1px 1px 3px #1f1f1f;
+    }
+
+    #swap h2 {
+        font-size: 1.5rem;
+    }
+
+    #swap .copy-coin-address {
+        flex-wrap: wrap;
+    }
+
+    #swap .copy-coin-address .coin-address {
+        width: 100%;
+    }
+
+    section#about .about-container .about-content {
+        width: 90%;
+    }
+
+    .about-content p {
+        line-height: 1.7em;
+        font-size: 0.66rem;
+    }
+
+    .feature-container .feature p {
+        font-size: 0.6em;
+    }
+
+    .document-name select,
+    .document-name option {
+        font-size: 0.75rem;
+        padding: 1rem 4rem 1rem 1rem;
+    }
+
+    .document-name .view-button {
+        font-size: 0.7rem;
+    }
+
+    section#media {
+        margin-bottom: 0;
+    }
+
+    .contact {
+        background-color: transparent;
+    }
+
+    section#contact-us {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5rem;
+    }
+
+    section#contact-us h2 {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        color: white;
+    }
+
+    section#contact-us form {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    section#contact-us input,
+    section#contact-us textarea {
+        width: 80%;
+        background-color: #292929;
+        border-color: whitesmoke;
+        color: whitesmoke;
+    }
+
+    section#contact-us textarea {
+        height: 12ch;
+    }
+
+    section#contact-us form #email-submit {
+        background-color: #ffbb00;
+        color: #1f1f1f;
+        width: fit-content;
+        padding: 1em 2em;
+        margin-top: 1em;
+        border: 0;
+    }
+
+    aside {
+        width: 80%;
+    }
+
+    aside article {
+        padding: 1rem 0rem 2.5rem;
+        color: white;
+    }
+
+    aside article h2 {
+        margin-bottom: 2.5rem;
+        color: white;
+        font-size: 1.3em;
+    }
+
+    aside article h3 {
+        color: #ffd900;
+        text-shadow: 0 0 1rem #ffbb00;
+        font-size: 1em;
+    }
+
+    aside article .self-profile {
+        width: 70%;
+    }
+
+    aside article .self-profile p {
+        font-size: 0.67em;
+    }
+
+    aside figure #background-circle {
+        background-color: #ffbb00;
+        box-shadow: 0.1rem 0.1rem 1rem #ffd900;
+    }
+
+    footer {
+        flex-direction: column;
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: 0 0 2rem #ffc400;
+        padding-left: 12%;
+        padding-top: 7%;
+    }
+
+    footer .footer-box {
+        gap: 12%;
+    }
+
+    footer div ul li {
+        font-size: 0.83em;
+    }
+
+    footer .copyright-box {
+        width: 14rem;
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .website-introduction h1 {
+        font-size: 2.2rem;
+    }
+
+    .website-introduction p {
+        width: 100%;
+        font-size: 0.77em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    section.first-row .absolute-container .background-image {
+        left: -2rem;
+    }
+
+    section#about .feature-container {
+        width: 90%;
+    }
+
+    h4 {
+        font-size: 0.83rem;
+    }
+
+    #documents .docselector-container {
+        gap: 4rem;
+    }
+
+    .document-name {
+        flex-direction: column;
+    }
+
+    .document-name select,
+    .document-name option {
+        padding: 0.85rem 3rem 0.85em 0.85rem;
+    }
+
+    .document-name .view-button {
+        padding: 0.85rem 1.7rem;
+    }
+
+    .carousel-container i {
+        font-size: 1.5rem;
+    }
+
+    .slide article h3 {
+        line-height: 1.6rem;
+        font-size: 1rem;
+    }
+
+    .slide article p {
+        line-height: 1.1rem;
+        font-size: 0.6rem;
+    }
+
+    section#contact-us input,
+    section#contact-us textarea {
+        width: 100%;
+    }
+}
